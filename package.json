@@ -1,0 +1,26 @@
+{
+  "name": "notification",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node src/app/server.js",
+    "build": "next build",
+    "start": "node -e \"process.env.NODE_ENV='production'; require('./src/app/server.js')\"",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "next": "16.2.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
+    "tailwindcss": "^4"
+  }
+}
