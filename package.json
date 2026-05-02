@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node src/app/server.js",
+    "dev": "next dev",
     "build": "next build",
-    "start": "node -e \"process.env.NODE_ENV='production'; require('./src/app/server.js')\"",
+    "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
