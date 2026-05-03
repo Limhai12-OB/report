@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { AppSidebar } from "../components/reports/AppSidebar";
 import { GenerateReportModal } from "../components/reports/GenerateReportModal";
 import {
@@ -13,6 +14,7 @@ import { ReportsHome } from "../components/reports/ReportsHome";
 import { reportsCss } from "../components/reports/reports-css.js";
 
 export default function App() {
+  const router = useRouter();
   const [activeNav, setActiveNav] = useState("reports");
   const [showModal, setShowModal] = useState(false);
   const [step, setStep] = useState(1);
@@ -71,6 +73,13 @@ export default function App() {
     e?.stopPropagation();
     setSavedReports((prev) => prev.filter((r) => r.id !== id));
   };
+  const handleNavChange = (id) => {
+    if (id === "profile") {
+      router.push("/profile");
+      return;
+    }
+    setActiveNav(id);
+  };
 
   if (report) {
     return <ReportView report={report} onBack={() => setReport(null)} />;
@@ -89,7 +98,7 @@ export default function App() {
 
       <AppSidebar
         activeNav={activeNav}
-        onNavChange={setActiveNav}
+        onNavChange={handleNavChange}
         sidebarOpen={sidebarOpen}
         onToggleSidebar={() => setSidebarOpen((p) => !p)}
       />

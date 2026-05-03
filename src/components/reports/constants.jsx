@@ -115,6 +115,21 @@ export const NAV_ITEMS = [
     ),
   },
   {
+    id: "profile",
+    label: "Profile",
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <circle cx="8" cy="5" r="2.5" stroke="currentColor" strokeWidth="1.4" />
+        <path
+          d="M2.5 13c.5-2.3 2.6-3.5 5.5-3.5s5 1.2 5.5 3.5"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
+  },
+  {
     id: "settings",
     label: "Settings",
     icon: (
